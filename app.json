@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "sugarless-app",
+    "name": "Sugarless",
     "slug": "sugarless-app",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -10,21 +10,42 @@
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#40E0D0"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.sugarless.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Sugarless needs access to your camera to take foot photos for tracking.",
+        "NSPhotoLibraryUsageDescription": "Sugarless needs access to your photo library to save foot photos.",
+        "NSMicrophoneUsageDescription": "Sugarless may use audio for voice guidance during sensation checks."
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#40E0D0"
       },
+      "package": "com.sugarless.app",
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "RECORD_AUDIO"
+      ],
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Sugarless to access your camera to take foot photos."
+        }
+      ]
+    ]
   }
 }

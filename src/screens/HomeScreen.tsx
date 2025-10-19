@@ -60,6 +60,14 @@ export const HomeScreen = () => {
       color: '#9B7EDE',
       onPress: () => navigation.navigate('ComparePhotos'),
     },
+    {
+      id: 'ai',
+      title: 'AI Detection',
+      subtitle: 'AI-powered analysis',
+      icon: 'brain',
+      color: '#FF6B6B',
+      onPress: () => navigation.navigate('AI'),
+    },
   ];
 
   if (loading) {

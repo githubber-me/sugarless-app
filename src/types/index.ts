@@ -38,4 +38,5 @@ export type TabParamList = {
   Home: undefined;
   Photos: undefined;
   Check: undefined;
+  AI: undefined;
 };

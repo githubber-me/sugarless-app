@@ -5,6 +5,7 @@ import { Colors } from '../constants/colors';
 import { HomeScreen } from '../screens/HomeScreen';
 import { PhotosScreen } from '../screens/PhotosScreen';
 import { CheckScreen } from '../screens/CheckScreen';
+import { AIScreen } from '../screens/AIScreen';
 import { TabParamList } from '../types';
 
 const Tab = createBottomTabNavigator<TabParamList>();
@@ -58,6 +59,15 @@ export const TabNavigator = () => {
         options={{
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="finger-print" size={size} color={color} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="AI"
+        component={AIScreen}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="brain" size={size} color={color} />
           ),
         }}
       />
